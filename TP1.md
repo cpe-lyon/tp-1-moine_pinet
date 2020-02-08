@@ -196,31 +196,31 @@ Commandes :
 
 11- Commande :
 
-* *echo 'Hello Toto' >> toto*    => création du fichier "toto" contenant 'Hello Toto' en texte
-* *cat toto*                     => vérifie que le fichier "toto" contient bien 'Hello Toto' en texte
-* *ln toto titi*                 => création d'un lien de titi vers toto
-* *echo 'yoyo' >> toto*          => écriture de 'yoyo' dans le fichier "toto"
-* *cat toto*      
-* *cat titi*       => même contenu entre le fichier  "toto" et "titi"
-* *rm toto*         => supprime toto
-* *cat toto*        => retourne une erreur
-* *cat titi*        => affiche "Hello Toto ; yoyo"
+1. *echo 'Hello Toto' >> toto*    => création du fichier "toto" contenant 'Hello Toto' en texte
+2. *cat toto*                     => vérifie que le fichier "toto" contient bien 'Hello Toto' en texte
+3. *ln toto titi*                 => création d'un lien de titi vers toto
+4. *echo 'yoyo' >> toto*          => écriture de 'yoyo' dans le fichier "toto"
+5. *cat toto*      
+6. *cat titi*       => même contenu entre le fichier  "toto" et "titi"
+7. *rm toto*         => supprime toto
+8. *cat toto*        => retourne une erreur
+9. *cat titi*        => affiche "Hello Toto ; yoyo"
 			  
 En conséquence supprimer le fichier "toto" n' impact pas le fichier "titi" (qui est une copie de "toto")
 
 12- Commandes :
 
-* *ln -s titi tutu* => création d'un lien symbolique de tutu vers titi
-* *cat titi*      
-* *cat tutu*       => meme contenu entre titi et tutu
-* *echo 'bleach' >> titi* => écriture de 'bleach' dans le fichier "titi"
-* *cat titi* => vérification de l'écriture de 'bleach' dans le fichier "titi"
-* *cat tutu* => même contenu entre titi et tutu
-* *echo 'bleach' >> tutu
-* *cat titi*                 
-* *cat tutu*             => meme contenu entre titi et tutu
-* *rm titi* => on supprime titi
-* *cat tutu* => *tutu : No such file or directory*
+1. *ln -s titi tutu* => création d'un lien symbolique de tutu vers titi
+2. *cat titi*      
+3. *cat tutu*       => meme contenu entre titi et tutu
+4. *echo 'bleach' >> titi* => écriture de 'bleach' dans le fichier "titi"
+5. *cat titi* => vérification de l'écriture de 'bleach' dans le fichier "titi"
+6. *cat tutu* => même contenu entre titi et tutu
+7. *echo 'bleach' >> tutu
+8. *cat titi*                 
+9. *cat tutu*             => meme contenu entre titi et tutu
+10. *rm titi* => on supprime titi
+11. *cat tutu* => *tutu : No such file or directory*
 
 **NB** : avec la commande *ls* on observe que le fichier "tutu" est toujours présent dans le répertoire personnelle mais est affiché en rouge (via la commande *ls*). En effet, le fichier "tutu" pointe vers une zone mémoire autrefois occupée par "titi" mais dorénavant vide !!!
 
