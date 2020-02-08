@@ -290,6 +290,7 @@ On trouve finalement que l'alias de 'll' est dans ".bashrc"
 1. *mkdir jesuisla*
 2. *locate jesuisla*
 3. Résulat => ""
+
 Le fichier n'apparaît pas car locate rapporte seulement les fichiers créent après la plus récente mise à jour de la base de données courante.
 
  </br>
