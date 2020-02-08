@@ -251,6 +251,39 @@ Cette commande se décompose de la manière suivante :
 * *-r* => trie selon l'ordre alphabétique inverse
 * */etc/passwd* => le fichier à trier
 
+18- Afin d'afficher seulement les utilisateurs de la machine, cela même contenu dans le fichier "passwd", on utilise la commande : *cut -f1 -d: /etc/passwd*
+
+Cette commande se décompose de la manière suivante :
+* *cut* => extraction d'un texte du fichier spécifié
+* *f1* => spécifie que le "terrain" (field) à extraire est le numéro 1
+* *d:* => spécifie que le délimiteur de terrain est ":"
+* */etc/passwd* => le fichier dont on souhaite extraire l'information
+
+19- Afin de déterminer l'ensemble des pages de manuels comportant le mot-clé 'conversion', on utilise la commande suivante : *man -k conversion* . En conséquence, on observe à l'écran l'affichage de 4 pages de manuels, contenant le mot-clé 'conversion' dans leur description.
+
+20- Dans le but d'afficher l'ensemble des fichiers présents sur la machine se nommant passwd on utilise la commande : *find -name passwd* . Il est toutefois plus pertinent de précéder la commande ci-dessus par "sudo" car certains fichiers ont un accès restreint aux simples utilisateurs. Ainsi, en appliquant la commande *sudo find -name passwd* on obtient le résultat suivant :
+
+![Recherche passwd](https://github.com/cpe-lyon/tp-1-moine_pinet/blob/master/tp41.PNG)
+
+21- Afin d'enregistrer cette même recherche dans un fichier dénommé "list_passwd_files.txt", on éxécutera la commande : *man -k -conversion >> ~/list_passwd_files.txt*
+
+22- Dans le but de rechercher dans quel fichier du répertoire personnel est défini l'alias *ll*, on utilisera la commande suivante : *grep -r -i ll ./*
+
+Cette commande se décortique de la manière suivante :
+* *-r* => recherche récursive
+* *-i* => insensible à la casse (majuscule-minuscule)
+* *./* => recherche dans tous le répertoire
+   
+On trouve finalement que l'alias de 'll' est dans ".bashrc"
+
+23- Afin de localiser le fichier "history.log", on utilisera la commande : *locate history.log* . On obtient à l'écran l'affichage de la ligne suivante : */var/log/apt/hystory.log* . En conséquence, "history.log" est présent dans le répertoire "/var/log/apt/".
+
+24- Commandes :
+1. *mkdir jesuisla*
+2. *locate jesuisla*
+3. Résulat => ""
+Le fichier n'apparaît pas car locate rapporte seulement les fichiers créent après la plus récente mise à jour de la base de données courante.
+  
 
 
 
