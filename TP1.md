@@ -293,7 +293,7 @@ Le fichier n'apparaît pas car locate rapporte seulement les fichiers créent ap
 
  </br>
  </br>
-Il est important que de noter que le shell présent dans le terminal minux peut se personnalisé. A cette effet, il est nécessaire de tenir compte de l'ensemble des outils que l'on peut disposer en ce shell, comme le montre le tableau ci-dessous :
+Il est important que de noter que le shell présent dans le terminal minux peut se personnaliser. A cette effet, il est nécessaire de tenir compte de l'ensemble des outils que l'on peut disposer en ce shell, comme le montre le tableau ci-dessous :
 
 ![Personnilation du sheel](https://github.com/cpe-lyon/tp-1-moine_pinet/blob/master/tp14.PNG)
 
@@ -303,7 +303,7 @@ En décommentant la ligne *force_color_prompt=yes* pour activer la couleur et en
 
 Par la suite, on implémente la ligne *PS1* attitré à la personnalisation du shell comme ci-dessous :
 
-![Personnilation du sheel étape 2](https://github.com/cpe-lyon/tp-1-moine_pinet/blob/master/tp13.PNG)
+![Personnilation du sheel étape 2](https://github.com/cpe-lyon/tp-1-moine_pinet/blob/master/tp13.png)
 
 On obtient en conséquence le shell suivant :
 
