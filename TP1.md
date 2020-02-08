@@ -18,7 +18,9 @@ Valeurs de retour :
  
      2	- si une option non valable est spécifiée
      
-2- Il est possible de rechercher un terme dans le manuel (appelé avec la commande *man*). Pour cela on utilise la commande : */ terme_recherche*  (dans l'interface du manuel). Le symbole *"/"* précède le nom du terme recherché. Par exemple, *"/option"* recherchera l'ensemble des occurences du terme "option" dans la page du manuel actuellement affichée.
+2- Il est possible de rechercher un terme dans le manuel (appelé avec la commande *man*). Pour cela on utilise la commande : */ terme_recherche*  (dans l'interface du manuel). 
+
+Le symbole *"/"* précède le nom du terme recherché. Par exemple, *"/option"* recherchera l'ensemble des occurences du terme "option" dans la page du manuel actuellement affichée.
 
 Il est important de noter que ces recherches adopte différentes options, plus ou moins utiles en fonction de notre "position" dans le manuel consulté (par cela j'entends dire à quelle page nous nous situons). En ce sens, nous avons les options suivantes :
 
@@ -30,7 +32,13 @@ Il est important de noter que ces recherches adopte différentes options, plus o
      
 3- On peut quitter le manuel actuellement consulté à tous moment en appuyant sur la touche *q*
 
-4- ![Screenshot](tp 1 41.PNG)
+4- Les informations relatives aux numéros des sections se trouvent dans le tableau ci-dessus :
+
+![Section](https://github.com/cpe-lyon/tp-1-moine_pinet/blob/master/tp41.PNG)
+
+Ainsi, en conséquence pour afficher la première page du manuel de la section 6, on utilise la commande : *man 6 intro*
+
+Cette section traite des jeux et des programmes amusants disponibles sur le système d'exploitation linux (distribution **Ubuntu -Server** dans le cas présent).
 
 
 
