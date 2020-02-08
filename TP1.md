@@ -76,31 +76,80 @@ Un chemin est dit absolu lorsque'il est instancié par rapport à la racine (dep
 
 L'ensemble des commandes réalisées pour crée l'architecture ci-dessus sont :
 
-* *cd \~* (on revient à la racine !!!)
-* *mkdir dossier1* ; *mkdir dossier2* (on crée les dossiers dans la racine)
-* *cd dossier1* ; *touch fichier1* (on va dans "dossier1" et on crée "fichier1")
+1. *cd \~* (on revient à la racine !!!)
+2. *mkdir dossier1* ; *mkdir dossier2* (on crée les dossiers dans la racine)
+3. *cd dossier1* ; *touch fichier1* (on va dans "dossier1" et on crée "fichier1")
   
   **NB** : "ls" permet de voir le contenu d'un dossier et donc de vérifier la présence (et en ce sens leur création) 
   des fichiers et dossiers dans l'emplacement courant
      
-* *cd \~/dossier2* (on va dans le "dossier2" via le chemin absolu)
-* *mkdir dossier2.1* ; *mkdir dossier2.2* (on créer les dossiers dans "dossier2")
+4. *cd \~/dossier2* (on va dans le "dossier2" via le chemin absolu)
+5. *mkdir dossier2.1* ; *mkdir dossier2.2* (on créer les dossiers dans "dossier2")
      
-* *cd dossier2.2* ; *touch fichier2* ; *touch fichier3* (on créer les fichiers "fichier2" et "fichier3" dans le "dossier2.2")
+6. *cd dossier2.2* ; *touch fichier2* ; *touch fichier3* (on créer les fichiers "fichier2" et "fichier3" dans le "dossier2.2")
 
 8- Commandes : 
 
-* *cd \~ *
-* *rm fichier1* => Cannot remove 'fichier1' : No such file in directory (fichier non présent/introuvable 
+1. *cd \~*
+2. *rm fichier1* => *Cannot remove 'fichier1' : No such file in directory* (fichier non présent/introuvable 
    dans répertoire courant !!!)
-* *rm dossier1* => Cannot remove 'dossier1' : Is a directory
+3. *rm dossier1* => *Cannot remove 'dossier1' : Is a directory*
 
 **Remarque** : 
-1. On ne peut supprimer un fichier qui n'est pas présent dans le répertoire courant (répertoire où l'on se situe)
-2. On ne peut supprimer simplement un dossier contenant un ensemble de fichiers ou de données. Pour se faire, se référer à la question 10 de la partie 1.II .
+* On ne peut supprimer un fichier qui n'est pas présen dans le répertoire courant (répertoire où l'on se situe)
+* On ne peut supprimer simplement un dossier contenant un ensemble de fichiers ou de données. Pour se faire, se référer à la question 10 de la partie 1.II .
+
+9/10- L'ensemble des commandes permettant de supprimer un dossier sont :
+* *rm* => supprime dossier ou fichier
+* *rmdir* => supprime dossier vide
+
+11- Pour supprimer le "dossier2" on tente la commande : *rm dossier2*. Or on obtient, à l'écran : *Cannot remove 'dossier2' : Is a directory* 
+
+12- Pour supprimer en une même ligne le "dossier2" on note : *rm -r dossier2* . Cette commande supprime récursivement les fichiers et dossiers de "dossier2" ce qui permet, en outre, de supprimer "dossier2" ainsi que son contenu.
+
+#### Commandes importantes
+
+1- La commande qui permet l'affchage de l'heure dans un terminal linux est : *date*
+
+**NB** : on verra dans la partie 2 qu'il est possible de modifier le fichier ".bashrc" afin que le shell affiche en à chaque "retour chariot" (ou bien "entrée"), le nom de l'utilisateur, le nom de la machine et même l'heure (avec ou sans les secondes).
+
+Commande : *time commande [arg]*
+
+Cette renvoie des statsitiques sur le temps d'execution de la commande. Elle génère trois chronomètres :
+
+* *user*
+* *sys*
+* *real*
+
+2- Commandes :
+
+* *ls* => liste les fichiers/dossiers dans le répertoire courant
+* *la* => même chose mais n'ignore pas les dossiers cachés (ceux qui commence par . , comme par exemple ".bashrc" présent dans le répertoire personnel)
+
+3- Le programme ls se situe dans le répertoire "/usr/bin". Pour trouver se dit résultat, on utilise la commande : *which ls* 
+
+4- La commande *ll* n'admet pas d'entrée manuel. En effet, en utilisant la commande *alias ll*, cette dernière retourne *ls -alF*. Ainsi on peut dire que *ll* n'a pas d'entrée manuel car c'est un alias de *ls*. En outre, *ll* agit comme *ls* mais avec trois options supplémentaires :
 
 
-9- 
+     a	- n'ignore pas les fichiers commençant par "."
+ 
+     l	- utilise des listings de long format
+ 
+     F	- "classify" => classe les fichiers
+     
+5- La commande permettant d'afficher l'ensemble des fichiers contenus dans "/bin" est : *la /bin*
+
+**NB** : on peut aussi utiliser *ls /bin*, car après observation, il n'y a pas de fichiers commençant par "." dans le dossier */bin*.
+
+6- La commande *ls ..*  liste l'ensemble des fichiers et dossiers (ne commançant pas par ".") présents dans le répertoire parent de l'emplacement courant de l'utilisateur dans l'arborescence des fichiers linux.
+
+**NB**: pour plus de pertinence et pour n'omettre aucun fichier, on peut utiliser *la ..* qui listera l'ensemble des fichirs et dossiers présents dans le répertoire parent de l'emplacement courant de l'utilisateur dans l'arborescence des fichiers linux.
+
+7- 
+
+
+
+
      
 
 
