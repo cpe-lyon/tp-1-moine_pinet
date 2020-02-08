@@ -1,4 +1,4 @@
-# Compte-Rendu Administration
+# Compte-Rendu Administration Système
 ## Partie 1
 ### Prise en main de l’interpréteur de commandes
 
@@ -143,7 +143,7 @@ Cette renvoie des statsitiques sur le temps d'execution de la commande. Elle gé
 
 6- La commande *ls ..* , liste l'ensemble des fichiers et dossiers (ne commançant pas par ".") présents dans le répertoire parent de l'emplacement courant de l'utilisateur dans l'arborescence des fichiers linux.
 
-**NB**: pour plus de pertinence et pour n'omettre aucun fichier, on peut utiliser *la ..* qui listera l'ensemble des fichirs et dossiers présents dans le répertoire parent de l'emplacement courant de l'utilisateur dans l'arborescence des fichiers linux.
+**NB** : pour plus de pertinence et pour n'omettre aucun fichier, on peut utiliser *la ..* qui listera l'ensemble des fichirs et dossiers présents dans le répertoire parent de l'emplacement courant de l'utilisateur dans l'arborescence des fichiers linux.
 
 7- Commande : *pwd*
 
@@ -194,8 +194,8 @@ Commandes :
 * *cat toto*                     => vérifie que le fichier "toto" contient bien 'Hello Toto' en texte
 * *ln toto titi*                 => création d'un lien de titi vers toto
 * *echo 'yoyo' >> toto*          => écriture de 'yoyo' dans le fichier "toto"
-* *cat toto*      |
-* *cat titi*      | => même contenu entre le fichier  "toto" et "titi"
+* *cat toto*      
+* *cat titi*       => même contenu entre le fichier  "toto" et "titi"
 * *rm toto*         => supprime toto
 * *cat toto*        => retourne une erreur
 * *cat titi*        => affiche "Hello Toto ; yoyo"
@@ -205,18 +205,56 @@ En conséquence supprimer le fichier "toto" n' impact pas le fichier "titi" (qui
 12- Commande :
 
 * *ln -s titi tutu* => création d'un lien symbolique de tutu vers titi
-* *cat titi*      |
-* *cat tutu*      | => meme contenu entre titi et tutu
+* *cat titi*      
+* *cat tutu*       => meme contenu entre titi et tutu
 * *echo 'bleach' >> titi* => écriture de 'bleach' dans le fichier "titi"
 * *cat titi* => vérification de l'écriture de 'bleach' dans le fichier "titi"
 * *cat tutu* => même contenu entre titi et tutu
 * *echo 'bleach' >> tutu
-* *cat titi*            |     
-* *cat tutu*            | => meme contenu entre titi et tutu
+* *cat titi*                 
+* *cat tutu*             => meme contenu entre titi et tutu
 * *rm titi* => on supprime titi
 * *cat tutu* => *tutu : No such file or directory*
 
-NB : avec la commande "ls" on observe que le fichier "tutu" est toujours présent dans le répertoire personnelle mais est affiché en rouge (via la commande *ls*). En effet, le fichier "tutu" pointe vers une zone mémoire autrefois occupée par "titi" mais dorénavant vide !!!
+**NB** : avec la commande *ls* on observe que le fichier "tutu" est toujours présent dans le répertoire personnelle mais est affiché en rouge (via la commande *ls*). En effet, le fichier "tutu" pointe vers une zone mémoire autrefois occupée par "titi" mais dorénavant vide !!!
+
+13- Commande  : *cat /var/log/syslog*
+
+Cette commande permet d'afficher le fichier "syslog" relativement long. Par conséquent il est possible d'interrompre (*ctrl + s*) le défilement du fichier, ou de le reprendre (*ctrl + q*).
+
+14- Commandes :
+
+* *head -n 5 /var/log/syslog* => affiche les 5 premières lignes de /var/log/syslog
+* *tail -n 15 /var/log/syslog* => affiche les 15 dernières lignes de /var/log/syslog
+* *head -n 10 /var/log/syslog | tail -n 20* => affiche les lignes 10-20 de /var/log/syslog
+
+15- Commande : *dsmeg | less*
+
+Cette commande se décortique sous deux termes :
+* *dsmeg*  : affiche la mémoire tampon de message du noyau linux
+* *|less*  : permet de lire le fichier (ici spécifier avant  "|") page par page 
+sans le modifier
+
+16- Commande : *cat /etc/passwd* => affiche contenu du fichier "passwd"
+
+De plus, le fichier "passwd" contient une base de données textuelle d'informations sur l'ensemble des utilisateurs qui peuvent se connecter au système en cours de fonctionnement.
+
+Pour afficher le manuel associée au fichier passwd, on note dans le terminal la commande : *man passwd*
+
+17- Afin de trier la première colone de /etc/passwd par ordre alphabétique inverse on note la commande suivante : *sort +0 -0 -r /etc/passwd*
+
+Cette commande se décompose de la manière suivante :
+
+* *sort* => trie un fichier selon les options définis par la suite dans la même ligne de commande
+* *+0* => commence le trie du fichier à la première colone (pour la seconde colone au notera +1, ainsi de suite)
+* *-0* => fini le trie du fichier à la première colone (pour la seconde colone au notera -1, ainsi de suite)
+* *-r* => trie selon l'ordre alphabétique inverse
+* */etc/passwd* => le fichier à trier
+
+
+
+
+
 
 
    
