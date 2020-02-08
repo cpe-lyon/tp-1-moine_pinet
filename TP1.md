@@ -2,7 +2,7 @@
 ## Partie 1
 ### Prise en main de l’interpréteur de commandes
 
-#### Manuel
+#### I Manuel
 <br/>
 <br/>
 
@@ -47,7 +47,7 @@ Cette section traite des jeux et des programmes amusants disponibles sur le syst
 <br/>
 <br/>
 
-#### Navigation dans l’arborescence des fichiers
+####  II Navigation dans l’arborescence des fichiers
 
 <br/>
 <br/>
@@ -76,17 +76,30 @@ Un chemin est dit absolu lorsque'il est instancié par rapport à la racine (dep
 
 L'ensemble des commandes réalisées pour crée l'architecture ci-dessus sont :
 
-* *cd ~* (on revient à la racine !!!)
+* *cd \~* (on revient à la racine !!!)
 * *mkdir dossier1* ; *mkdir dossier2* (on crée les dossiers dans la racine)
 * *cd dossier1* ; *touch fichier1* (on va dans "dossier1" et on crée "fichier1")
   
   **NB** : "ls" permet de voir le contenu d'un dossier et donc de vérifier la présence (et en ce sens leur création) 
   des fichiers et dossiers dans l'emplacement courant
      
-* *cd ~/dossier2* (on va dans le "dossier2" via le chemin absolu)
+* *cd \~/dossier2* (on va dans le "dossier2" via le chemin absolu)
 * *mkdir dossier2.1* ; *mkdir dossier2.2* (on créer les dossiers dans "dossier2")
      
 * *cd dossier2.2* ; *touch fichier2* ; *touch fichier3* (on créer les fichiers "fichier2" et "fichier3" dans le "dossier2.2")
+
+8- Commandes : 
+
+* *cd \~ *
+* *rm fichier1* => Cannot remove 'fichier1' : No such file in directory (fichier non présent/introuvable 
+   dans répertoire courant !!!)
+* *rm dossier1* => Cannot remove 'dossier1' : Is a directory
+
+**Remarque** : 
+1. On ne peut supprimer un fichier qui n'est pas présen dans le répertoire courant (répertoire où l'on se situe)
+2. On ne peut supprimer simplement un dossier contenant un ensemble de fichiers ou de données. Pour se faire, se référer à la question 10 de la partie 1.II .
+
+9- 
      
 
 
