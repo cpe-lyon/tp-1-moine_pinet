@@ -52,9 +52,29 @@ Cette section traite des jeux et des programmes amusants disponibles sur le syst
 <br/>
 <br/>
 
-L'arborescence souhaitée est la suivante :
+1- Pour allez dans le dossier  **/var/log** depuis notre position actuel (à savoir le répertoire personnelle) on utilise la commande : *cd /var/log*
 
-![Arborescence](https://github.com/cpe-lyon/tp-1-moine_pinet/blob/master/tp41.PNG)
+NB : *cd* est la commande qui permet de se déplacer dans une arborescence linux. Elle prend principalement en paramètre le chemin associé à l'emplacement à atteindre dans l'arborescence. En outre, il est important de spécifier que *cd* peut utiliser des chemins relatifs où absolus. 
+
+Un chemin est dit relatif lorsque'il est instancié par rapport à l'endroit où l'utilisateur se situe dans l'arborescence.
+
+Un chemin est dit absolu lorsque'il est instancié par rapport à la racine (depuis *"/"*).
+
+2- Pour remonter dans le dossier parent en utilisant un chemin relatif, on utilise la commande : *cd ..*
+
+3- Pour retourner dans le dossier personnel, on utlise la commande : *cd ~*
+
+4- Pour retourner dans le dossier précédemment consulté, on utilise la commande : *cd -*
+
+5- Il est important qu'en tant que simple utlisateur, l'accès au dossier *root* est restreint pour des questions de sécurité. La commande *cd /root/* résulte par le résultat : *permission denied*
+
+6- La commande *sudo cd /root/* donne le résultat : *command not found*
+
+7- L'arborescence souhaitée est la suivante :
+
+![Arborescence](https://github.com/cpe-lyon/tp-1-moine_pinet/blob/master/tpexo1.PNG)
+
+
 
 
 
