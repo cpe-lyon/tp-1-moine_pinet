@@ -54,7 +54,7 @@ Cette section traite des jeux et des programmes amusants disponibles sur le syst
 
 1- Pour allez dans le dossier  **/var/log** depuis notre position actuel (à savoir le répertoire personnelle) on utilise la commande : *cd /var/log*
 
-NB : *cd* est la commande qui permet de se déplacer dans une arborescence linux. Elle prend principalement en paramètre le chemin associé à l'emplacement à atteindre dans l'arborescence. En outre, il est important de spécifier que *cd* peut utiliser des chemins relatifs où absolus. 
+**NB** : *cd* est la commande qui permet de se déplacer dans une arborescence linux. Elle prend principalement en paramètre le chemin associé à l'emplacement à atteindre dans l'arborescence. En outre, il est important de spécifier que *cd* peut utiliser des chemins relatifs où absolus. 
 
 Un chemin est dit relatif lorsque'il est instancié par rapport à l'endroit où l'utilisateur se situe dans l'arborescence.
 
@@ -62,7 +62,7 @@ Un chemin est dit absolu lorsque'il est instancié par rapport à la racine (dep
 
 2- Pour remonter dans le dossier parent en utilisant un chemin relatif, on utilise la commande : *cd ..*
 
-3- Pour retourner dans le dossier personnel, on utlise la commande : *cd ~*
+3- Pour retourner dans le dossier personnel, on utlise la commande : *cd \~*
 
 4- Pour retourner dans le dossier précédemment consulté, on utilise la commande : *cd -*
 
@@ -73,6 +73,21 @@ Un chemin est dit absolu lorsque'il est instancié par rapport à la racine (dep
 7- L'arborescence souhaitée est la suivante :
 
 ![Arborescence](https://github.com/cpe-lyon/tp-1-moine_pinet/blob/master/tpexo1.PNG)
+
+L'ensemble des commandes réalisées pour crée l'architecture ci-dessus sont :
+
+* *cd ~* (on revient à la racine !!!)
+* *mkdir dossier1* ; *mkdir dossier2* (on crée les dossiers dans la racine)
+* *cd dossier1* ; *touch fichier1* (on va dans "dossier1" et on crée "fichier1")
+  
+  **NB** : "ls" permet de voir le contenu d'un dossier et donc de vérifier la présence (et en ce sens leur création) 
+  des fichiers et dossiers dans l'emplacement courant
+     
+* *cd ~/dossier2* (on va dans le "dossier2" via le chemin absolu)
+* *mkdir dossier2.1* ; *mkdir dossier2.2* (on créer les dossiers dans "dossier2")
+     
+* *cd dossier2.2* ; *touch fichier2* ; *touch fichier3* (on créer les fichiers "fichier2" et "fichier3" dans le "dossier2.2")
+     
 
 
 
