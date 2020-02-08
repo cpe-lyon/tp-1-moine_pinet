@@ -149,7 +149,77 @@ Cette renvoie des statsitiques sur le temps d'execution de la commande. Elle gé
 
 Cette commande donne le chemin complet du dossier courant.
 
-8- 
+8- Commande : *echo 'yo'>plop* ; *echo 'yo'>plop*
+
+   => crée le fichier "plop" lors de la première instance puis écrit 'yo' lors de la seconde instance.
+   
+9- Commandes : *echo 'yo'>>plop* ; *echo 'yo'>>plop*
+   
+   => créer le fichier "plop" et écrit 'yo'  dans le fichier lors de la première instance et écrit à nouveau 'yo' (à la ligne) dans le fichier lors de la seconde instance.
+   
+10- La commande file test l'argument (nom du fichier/dossier) dans l'intention de le classer.
+Elle procède selon 3 traitements : filesystem tests, magic tests, language tets. Le premier test 
+qui réussi engendre la classification et l'affichage à l'écran du résultat de cette classification.
+
+1. filesytem tests => le programme regarde si le fichier est vide ou si il est une sorte
+de fichier spécial (par exemple les points d'accès préparés par le système 
+aux périphériques présent dans "/dev"). Tous fichiers inconnus appropriés au systeme 
+en cours (socket, liens symboliques, ...) sont instancié s'ils sont définis dans le systeme header file <sys/sta.h> .
+
+2. magic tests => utilisé pour checker les fichiers avec des formats fixés particuliers.
+Un exemple commun est le format de sorti de compilation d'un prog C, soit a.out , définis
+dans elf.h. Ces fichiers ont un nombre magic stockés dans une place spécifique
+proche du début du fichier où il est dit que le system Unix opérant traite ce fichier
+comme un fichier binaire éxécutable. Ce concept de magic test est appliqué par extenxion aux 
+fichiers de données. N'importe quel fichier avec des idientifiants à propos d'un
+offset fixé (offset = place du fichier) peut bénéficier du test. Les infos qui identifie
+les fichiers sont stockés dans /etc/magic et pour les fichiers compilés dans usr/share/misc/magic.mgc .
+
+
+3. language test => si aucun test ne réussit, le test de language examine si le fichier est 
+un fichier text. Le system analyse alors le rangement des caractères ASCII, ISO-8859-x, ...
+et leur rangement, ou bien séquence, pour voir si cela constitue une empreinte de type fichier text.
+Aussi le language test regarde les chaînes de caractères particulières (ex : names.h) qui 
+peuvent appairaitres n'importe où dans les premiers blocs du fichier. Par exemple, le mot
+clé "struct" indique que le fichier est programme C.
+
+Commandes :
+
+* *file dossier1* => *dossier1: directory*
+* *file fichier1* => *fichier1: empty*
+
+11- Commande :
+
+* *echo 'Hello Toto' >> toto*    => création du fichier "toto" contenant 'Hello Toto' en texte
+* *cat toto*                     => vérifie que le fichier "toto" contient bien 'Hello Toto' en texte
+* *ln toto titi*                 => création d'un lien de titi vers toto
+* *echo 'yoyo' >> toto*          => écriture de 'yoyo' dans le fichier "toto"
+* *cat toto*      |
+* *cat titi*      | => même contenu entre le fichier  "toto" et "titi"
+* *rm toto*         => supprime toto
+* *cat toto*        => retourne une erreur
+* *cat titi*        => affiche "Hello Toto ; yoyo"
+			  
+En conséquence supprimer le fichier "toto" n' impact pas le fichier "titi" (qui est une copie de "toto")
+
+12- Commande :
+
+* *ln -s titi tutu* => création d'un lien symbolique de tutu vers titi
+* *cat titi*      |
+* *cat tutu*      | => meme contenu entre titi et tutu
+* *echo 'bleach' >> titi* => écriture de 'bleach' dans le fichier "titi"
+* *cat titi* => vérification de l'écriture de 'bleach' dans le fichier "titi"
+* *cat tutu* => même contenu entre titi et tutu
+* *echo 'bleach' >> tutu
+* *cat titi*            |     
+* *cat tutu*            | => meme contenu entre titi et tutu
+* *rm titi* => on supprime titi
+* *cat tutu* => *tutu : No such file or directory*
+
+NB : avec la commande "ls" on observe que le fichier "tutu" est toujours présent dans le répertoire personnelle mais est affiché en rouge (via la commande *ls*). En effet, le fichier "tutu" pointe vers une zone mémoire autrefois occupée par "titi" mais dorénavant vide !!!
+
+
+   
 
 
 
