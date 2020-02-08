@@ -283,10 +283,14 @@ On trouve finalement que l'alias de 'll' est dans ".bashrc"
 2. *locate jesuisla*
 3. Résulat => ""
 Le fichier n'apparaît pas car locate rapporte seulement les fichiers créent après la plus récente mise à jour de la base de données courante.
+
  </br>
  </br>
+ 
 ## Partie 2
+
 ### Personnalisation du shell
+
  </br>
  </br>
 Il est important que de noter que le shell présent dans le terminal minux peut se personnalisé. A cette effet, il est nécessaire de tenir compte de l'ensemble des outils que l'on peut disposer en ce shell, comme le montre le tableau ci-dessous :
