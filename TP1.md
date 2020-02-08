@@ -30,7 +30,8 @@ Il est important de noter que ces recherches adopte différentes options, plus o
      
 3- On peut quitter le manuel actuellement consulté à tous moment en appuyant sur la touche *q*
 
-4- 
+4- <img src=></img>
+
 
 
 
