@@ -263,7 +263,7 @@ Cette commande se décompose de la manière suivante :
 
 20- Dans le but d'afficher l'ensemble des fichiers présents sur la machine se nommant passwd on utilise la commande : *find -name passwd* . Il est toutefois plus pertinent de précéder la commande ci-dessus par "sudo" car certains fichiers ont un accès restreint aux simples utilisateurs. Ainsi, en appliquant la commande *sudo find -name passwd* on obtient le résultat suivant :
 
-![Recherche passwd](https://github.com/cpe-lyon/tp-1-moine_pinet/blob/master/tp41.PNG)
+![Recherche passwd](https://github.com/cpe-lyon/tp-1-moine_pinet/blob/master/tpexo12.PNG)
 
 21- Afin d'enregistrer cette même recherche dans un fichier dénommé "list_passwd_files.txt", on éxécutera la commande : *man -k -conversion >> ~/list_passwd_files.txt*
 
@@ -283,7 +283,31 @@ On trouve finalement que l'alias de 'll' est dans ".bashrc"
 2. *locate jesuisla*
 3. Résulat => ""
 Le fichier n'apparaît pas car locate rapporte seulement les fichiers créent après la plus récente mise à jour de la base de données courante.
-  
+ </br>
+ </br>
+## Partie 2
+### Personnalisation du shell
+ </br>
+ </br>
+Il est important que de noter que le shell présent dans le terminal minux peut se personnalisé. A cette effet, il est nécessaire de tenir compte de l'ensemble des outils que l'on peut disposer en ce shell, comme le montre le tableau ci-dessous :
+
+![Personnilation du sheel](https://github.com/cpe-lyon/tp-1-moine_pinet/blob/master/tp14.PNG)
+
+En décommentant la ligne *force_color_prompt=yes* pour activer la couleur et en utilisant la commande *source .bashrc* on obtient le rendu suivant :
+
+![Personnilation du sheel étape 1](https://github.com/cpe-lyon/tp-1-moine_pinet/blob/master/tp11.PNG)
+
+Par la suite, on implémente la ligne *PS1* attitré à la personnalisation du shell comme ci-dessous :
+
+![Personnilation du sheel étape 2](https://github.com/cpe-lyon/tp-1-moine_pinet/blob/master/tp13.PNG)
+
+On obtient en conséquence le shell suivant :
+
+![Personnilation du sheel étape 3](https://github.com/cpe-lyon/tp-1-moine_pinet/blob/master/tp12.PNG)
+
+
+
+
 
 
 
