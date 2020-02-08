@@ -107,7 +107,13 @@ L'ensemble des commandes réalisées pour crée l'architecture ci-dessus sont :
 
 12- Pour supprimer en une même ligne le "dossier2" on note : *rm -r dossier2* . Cette commande supprime récursivement les fichiers et dossiers de "dossier2" ce qui permet, en outre, de supprimer "dossier2" ainsi que son contenu.
 
-#### Commandes importantes
+</br>
+</br>
+
+#### III Commandes importantes
+
+</br>
+</br>
 
 1- La commande qui permet l'affchage de l'heure dans un terminal linux est : *date*
 
@@ -202,7 +208,7 @@ Commandes :
 			  
 En conséquence supprimer le fichier "toto" n' impact pas le fichier "titi" (qui est une copie de "toto")
 
-12- Commande :
+12- Commandes :
 
 * *ln -s titi tutu* => création d'un lien symbolique de tutu vers titi
 * *cat titi*      
@@ -231,9 +237,9 @@ Cette commande permet d'afficher le fichier "syslog" relativement long. Par cons
 15- Commande : *dsmeg | less*
 
 Cette commande se décortique sous deux termes :
-* *dsmeg*  : affiche la mémoire tampon de message du noyau linux
-* *|less*  : permet de lire le fichier (ici spécifier avant  "|") page par page 
-sans le modifier
+
+	 dsmeg  -  affiche la mémoire tampon de message du noyau linux
+	|less   -  permet de lire le fichier (ici spécifier avant  "|") page par page sans le modifier
 
 16- Commande : *cat /etc/passwd* => affiche contenu du fichier "passwd"
 
@@ -245,19 +251,20 @@ Pour afficher le manuel associée au fichier passwd, on note dans le terminal la
 
 Cette commande se décompose de la manière suivante :
 
-* *sort* => trie un fichier selon les options définis par la suite dans la même ligne de commande
-* *+0* => commence le trie du fichier à la première colone (pour la seconde colone au notera +1, ainsi de suite)
-* *-0* => fini le trie du fichier à la première colone (pour la seconde colone au notera -1, ainsi de suite)
-* *-r* => trie selon l'ordre alphabétique inverse
-* */etc/passwd* => le fichier à trier
+	sort        -  trie un fichier selon les options définis par la suite dans la même ligne de commande
+	+0          -  commence le trie du fichier à la première colone (pour la seconde colone au notera +1, ainsi de suite)
+	-0          -  fini le trie du fichier à la première colone (pour la seconde colone au notera -1, ainsi de suite)
+	-r          -  trie selon l'ordre alphabétique inverse
+	/etc/passwd -  le fichier à trier
 
 18- Afin d'afficher seulement les utilisateurs de la machine, cela même contenu dans le fichier "passwd", on utilise la commande : *cut -f1 -d: /etc/passwd*
 
 Cette commande se décompose de la manière suivante :
-* *cut* => extraction d'un texte du fichier spécifié
-* *f1* => spécifie que le "terrain" (field) à extraire est le numéro 1
-* *d:* => spécifie que le délimiteur de terrain est ":"
-* */etc/passwd* => le fichier dont on souhaite extraire l'information
+
+	cut          -  extraction d'un texte du fichier spécifié
+	f1           -  spécifie que le "terrain" (field) à extraire est le numéro 1
+	d:           -  spécifie que le délimiteur de terrain est ":"
+	/etc/passwd  -  le fichier dont on souhaite extraire l'information
 
 19- Afin de déterminer l'ensemble des pages de manuels comportant le mot-clé 'conversion', on utilise la commande suivante : *man -k conversion* . En conséquence, on observe à l'écran l'affichage de 4 pages de manuels, contenant le mot-clé 'conversion' dans leur description.
 
@@ -270,9 +277,10 @@ Cette commande se décompose de la manière suivante :
 22- Dans le but de rechercher dans quel fichier du répertoire personnel est défini l'alias *ll*, on utilisera la commande suivante : *grep -r -i ll ./*
 
 Cette commande se décortique de la manière suivante :
-* *-r* => recherche récursive
-* *-i* => insensible à la casse (majuscule-minuscule)
-* *./* => recherche dans tous le répertoire
+
+	-r   -  recherche récursive
+	-i   -  insensible à la casse (majuscule-minuscule)
+	./   -  recherche dans tous le répertoire
    
 On trouve finalement que l'alias de 'll' est dans ".bashrc"
 
@@ -293,6 +301,7 @@ Le fichier n'apparaît pas car locate rapporte seulement les fichiers créent ap
 
  </br>
  </br>
+ 
 Il est important que de noter que le shell présent dans le terminal minux peut se personnaliser. A cette effet, il est nécessaire de tenir compte de l'ensemble des outils que l'on peut disposer en ce shell, comme le montre le tableau ci-dessous :
 
 ![Personnilation du sheel](https://github.com/cpe-lyon/tp-1-moine_pinet/blob/master/tp14.PNG)
