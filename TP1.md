@@ -2,6 +2,10 @@
 ## Partie 1
 ### Prise en main de l’interpréteur de commandes
 
+#### Manuel
+<br/>
+<br/>
+
 1- Commande : *which [-a] nom_de_fichier*
 
 *-a* => affiche tous les chemins correspondant à chaque argument (en l'occurrence ici nom_de_fichier)
@@ -39,6 +43,19 @@ Il est important de noter que ces recherches adopte différentes options, plus o
 Ainsi, en conséquence pour afficher la première page du manuel de la section 6, on utilise la commande : *man 6 intro*
 
 Cette section traite des jeux et des programmes amusants disponibles sur le système d'exploitation linux (distribution **Ubuntu -Server** dans le cas présent).
+
+<br/>
+<br/>
+
+#### Navigation dans l’arborescence des fichiers
+
+<br/>
+<br/>
+
+L'arborescence souhaitée est la suivante :
+
+![Arborescence](https://github.com/cpe-lyon/tp-1-moine_pinet/blob/master/tp41.PNG)
+
 
 
 
