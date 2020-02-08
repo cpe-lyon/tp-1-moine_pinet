@@ -2,12 +2,13 @@
 ## Partie 1
 ### Prise en main de l’interpréteur de commandes
 
-1. Commande : *which [-a] nom_de_fichier*
+1- Commande : *which [-a] nom_de_fichier*
 
-
+<div align="center">
 Cette commande permet de renvoyer le chemin des fichiers éxécutés ultérieurement dans l'environnement
 si les arguments données en commande dans l'interpreteur de commande sont conformes à **POSIX**.
 En conséquence, *which* cherche la variable **PATH** dans les fichiers éxécutables.
+ </div>
 
 
 -a => affiche tous les chemins correspondant à chaque argument (nom_de_fichier)
