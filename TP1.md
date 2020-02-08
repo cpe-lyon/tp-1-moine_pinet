@@ -331,7 +331,7 @@ L'ensemble des couleurs relatives au texte du shell sont données dans le tablea
  </br>
  </br>
  
- ![Personnilation du sheel étape 4](https://github.com/cpe-lyon/tp-1-moine_pinet/blob/master/tp15.PNG)
+ ![Charizard ascii](https://github.com/cpe-lyon/tp-1-moine_pinet/blob/master/charizard.PNG)
 
 
 
