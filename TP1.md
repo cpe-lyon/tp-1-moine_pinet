@@ -99,6 +99,7 @@ L'ensemble des commandes réalisées pour crée l'architecture ci-dessus sont :
 1. On ne peut supprimer un fichier qui n'est pas présent dans le répertoire courant (répertoire où l'on se situe)
 2. On ne peut supprimer simplement un dossier contenant un ensemble de fichiers ou de données. Pour se faire, se référer à la question 10 de la partie 1.II .
 
+
 9- 
      
 
