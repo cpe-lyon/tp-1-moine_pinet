@@ -141,11 +141,15 @@ Cette renvoie des statsitiques sur le temps d'execution de la commande. Elle gé
 
 **NB** : on peut aussi utiliser *ls /bin*, car après observation, il n'y a pas de fichiers commençant par "." dans le dossier */bin*.
 
-6- La commande *ls ..*  liste l'ensemble des fichiers et dossiers (ne commançant pas par ".") présents dans le répertoire parent de l'emplacement courant de l'utilisateur dans l'arborescence des fichiers linux.
+6- La commande *ls ..* , liste l'ensemble des fichiers et dossiers (ne commançant pas par ".") présents dans le répertoire parent de l'emplacement courant de l'utilisateur dans l'arborescence des fichiers linux.
 
 **NB**: pour plus de pertinence et pour n'omettre aucun fichier, on peut utiliser *la ..* qui listera l'ensemble des fichirs et dossiers présents dans le répertoire parent de l'emplacement courant de l'utilisateur dans l'arborescence des fichiers linux.
 
-7- 
+7- Commande : *pwd*
+
+Cette commande donne le chemin complet du dossier courant.
+
+8- 
 
 
 
