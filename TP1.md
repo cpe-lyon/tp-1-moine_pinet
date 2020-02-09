@@ -157,7 +157,7 @@ Cette commande donne le chemin complet du dossier courant.
 
 8- Commande : *echo 'yo'>plop* ; *echo 'yo'>plop*
 
-   => crée le fichier "plop" lors de la première instance puis écrit 'yo' lors de la seconde instance.
+   => crée le fichier "plop" lors de la première instance et écrit 'yo'  puis écrit 'yo' une seconde fois en écrasant le premier lors de la seconde instance.
    
 9- Commandes : *echo 'yo'>>plop* ; *echo 'yo'>>plop*
    
@@ -232,7 +232,7 @@ Cette commande permet d'afficher le fichier "syslog" relativement long. Par cons
 
 * *head -n 5 /var/log/syslog* => affiche les 5 premières lignes de /var/log/syslog
 * *tail -n 15 /var/log/syslog* => affiche les 15 dernières lignes de /var/log/syslog
-* *head -n 10 /var/log/syslog | tail -n 20* => affiche les lignes 10-20 de /var/log/syslog
+* *sed -n "10,20p" /var/log/syslog * => affiche les lignes 10-20 de /var/log/syslog
 
 15- Commande : *dsmeg | less*
 
