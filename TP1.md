@@ -216,7 +216,7 @@ En conséquence supprimer le fichier "toto" n' impact pas le fichier "titi" (qui
 4. *echo 'bleach' >> titi* => écriture de 'bleach' dans le fichier "titi"
 5. *cat titi* => vérification de l'écriture de 'bleach' dans le fichier "titi"
 6. *cat tutu* => même contenu entre titi et tutu
-7. *echo 'bleach' >> tutu
+7. *echo 'bleach' >> tutu*
 8. *cat titi*                 
 9. *cat tutu*             => meme contenu entre titi et tutu
 10. *rm titi* => on supprime titi
